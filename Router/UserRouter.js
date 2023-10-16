@@ -19,7 +19,7 @@ router.post('/otpverify', otpVerify);
 
 router.post('/createreminder', createReminders);
 router.get('/viewreminders', viewReminders);
-router.get('/viewreminders/id', viewSingleReminder);
+router.get('/viewreminders/:id', viewSingleReminder);
 router.patch('/editreminders/:id', updateReminder);
 router.put('/editreminders/:id', replaceReminder);
 router.delete('/deletereminders/:id', deleteReminder);
