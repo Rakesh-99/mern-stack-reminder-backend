@@ -247,7 +247,7 @@ export const viewSingleReminder = async (req, res) => {
     res.json(productIndex);
 };
 
-// replace Product : 
+// replace reminder : 
 export const replaceReminder = async (req, res) => {
     const paramsId = req.params.id;
     const doc = await reminderModel.findOneAndReplace({ _id: paramsId }, req.body, { new: true });
@@ -256,7 +256,7 @@ export const replaceReminder = async (req, res) => {
 
 };
 
-// Update Product :
+// Update reminder :
 export const updateReminder = async (req, res) => {
     const paramsId = req.params.id;
     const doc = await reminderModel.findByIdAndUpdate({ _id: paramsId }, req.body, { new: true });
@@ -264,7 +264,7 @@ export const updateReminder = async (req, res) => {
     res.json(doc);
 };
 
-// Delete Product : 
+// Delete reminder : 
 export const deleteReminder = async (req, res) => {
     const paramsId = req.params.id;
     const doc = await reminderModel.findOneAndDelete({ _id: paramsId, });
